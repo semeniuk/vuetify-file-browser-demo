@@ -1,6 +1,13 @@
 <template>
     <v-app id="app">
-        <v-app-bar dense flat fixed clipped-left app color="blue-grey lighten-4">
+        <v-app-bar
+            dense
+            flat
+            fixed
+            :clipped-left="$vuetify.breakpoint.lgAndUp"
+            app
+            color="blue-grey lighten-4"
+        >
             <v-toolbar-title>
                 <v-app-bar-nav-icon @click.stop="drawer = !drawer" class="mr-0"></v-app-bar-nav-icon>
                 <span>Vuetify File Browser</span>
@@ -10,9 +17,9 @@
                 <v-icon style="font-size: 32px" color="blue-grey darken-4">mdi-github-circle</v-icon>
             </v-btn>
         </v-app-bar>
-        <v-navigation-drawer v-model="drawer" fixed clipped app>
+        <v-navigation-drawer v-model="drawer" fixed app :clipped="$vuetify.breakpoint.lgAndUp">
             <v-list>
-                <v-list-item>
+                <v-list-item to="/">
                     <v-list-item-icon>
                         <v-icon>mdi-home</v-icon>
                     </v-list-item-icon>
@@ -25,22 +32,21 @@
                             <v-list-item-title>GitHub</v-list-item-title>
                         </v-list-item-content>
                     </template>
-
-                    <v-list-item link>
+                    <v-list-item href="https://github.com/semeniuk/vuetify-file-browser" target="_blank">
                         <v-list-item-content class="ml-n5">
                             <v-list-item-title>
                                 <v-icon left>mdi-vuetify</v-icon>Vuetify Component
                             </v-list-item-title>
                         </v-list-item-content>
                     </v-list-item>
-                    <v-list-item link>
+                    <v-list-item href="https://github.com/semeniuk/vuetify-file-browser-server" target="_blank">
                         <v-list-item-content class="ml-n5">
                             <v-list-item-title>
                                 <v-icon left>mdi-nodejs</v-icon>Backend
                             </v-list-item-title>
                         </v-list-item-content>
                     </v-list-item>
-                    <v-list-item link>
+                    <v-list-item href="https://github.com/semeniuk/vuetify-file-browser-demo" target="_blank">
                         <v-list-item-content class="ml-n5">
                             <v-list-item-title>
                                 <v-icon left>mdi-web</v-icon>Demo Site
@@ -62,13 +68,12 @@
 export default {
     name: "App",
     data: () => ({
-        drawer: false
+        drawer: null
     })
 };
 </script>
 
 <style>
-
 * {
     text-transform: initial;
 }
