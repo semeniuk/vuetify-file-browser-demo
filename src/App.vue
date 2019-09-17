@@ -8,9 +8,12 @@
             app
             color="blue-grey lighten-4"
         >
+            <v-app-bar-nav-icon @click.stop="drawer = !drawer" class="mr-0"></v-app-bar-nav-icon>
             <v-toolbar-title>
-                <v-app-bar-nav-icon @click.stop="drawer = !drawer" class="mr-0"></v-app-bar-nav-icon>
-                <span>Vuetify File Browser</span>
+                <v-btn text to="/">
+                    <v-icon class="mr-2">mdi-view-dashboard</v-icon>
+                    <span class="title">Vuetify File Browser</span>
+                </v-btn>
             </v-toolbar-title>
             <div class="flex-grow-1"></div>
             <v-btn icon>
@@ -23,8 +26,13 @@
                     <v-list-item-icon>
                         <v-icon>mdi-home</v-icon>
                     </v-list-item-icon>
-
                     <v-list-item-title class="ml-n5">Home</v-list-item-title>
+                </v-list-item>
+                <v-list-item to="/" disabled>
+                    <v-list-item-icon>
+                        <v-icon>mdi-help-circle-outline</v-icon>
+                    </v-list-item-icon>
+                    <v-list-item-title class="ml-n5">Documentation</v-list-item-title>
                 </v-list-item>
                 <v-list-group prepend-icon="mdi-github-circle" no-action :value="true">
                     <template v-slot:activator>
@@ -32,21 +40,30 @@
                             <v-list-item-title>GitHub</v-list-item-title>
                         </v-list-item-content>
                     </template>
-                    <v-list-item href="https://github.com/semeniuk/vuetify-file-browser" target="_blank">
+                    <v-list-item
+                        href="https://github.com/semeniuk/vuetify-file-browser"
+                        target="_blank"
+                    >
                         <v-list-item-content class="ml-n5">
                             <v-list-item-title>
                                 <v-icon left>mdi-vuetify</v-icon>Vuetify Component
                             </v-list-item-title>
                         </v-list-item-content>
                     </v-list-item>
-                    <v-list-item href="https://github.com/semeniuk/vuetify-file-browser-server" target="_blank">
+                    <v-list-item
+                        href="https://github.com/semeniuk/vuetify-file-browser-server"
+                        target="_blank"
+                    >
                         <v-list-item-content class="ml-n5">
                             <v-list-item-title>
                                 <v-icon left>mdi-nodejs</v-icon>Backend
                             </v-list-item-title>
                         </v-list-item-content>
                     </v-list-item>
-                    <v-list-item href="https://github.com/semeniuk/vuetify-file-browser-demo" target="_blank">
+                    <v-list-item
+                        href="https://github.com/semeniuk/vuetify-file-browser-demo"
+                        target="_blank"
+                    >
                         <v-list-item-content class="ml-n5">
                             <v-list-item-title>
                                 <v-icon left>mdi-web</v-icon>Demo Site

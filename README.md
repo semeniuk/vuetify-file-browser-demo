@@ -1,5 +1,7 @@
 # Vuetify File Browser Demo
 
+[Demo](https://vuetify-file-browser-demo.herokuapp.com/)
+
 ## Project setup
 ```
 npm install
