@@ -1,6 +1,6 @@
 {
-  "name": "demo",
-  "short_name": "demo",
+  "name": "Vuetify File Browser",
+  "short_name": "Vuetify File Browser",
   "icons": [
     {
       "src": "./img/icons/android-chrome-192x192.png",
