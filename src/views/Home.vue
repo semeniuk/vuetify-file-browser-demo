@@ -3,7 +3,11 @@
         <h1 class="text-center font-weight-light my-5">Vuetify File Browser</h1>
         <v-row>
             <v-col>
-                <file-browser :axiosConfig="{baseURL: '__AXIOS_BASE_URL__'}" />
+                <file-browser
+                    :axiosConfig="{baseURL: '__AXIOS_BASE_URL__'}"
+                    :maxUploadFileSize="5242880"
+                    :maxUploadFilesCount="5"
+                />
             </v-col>
         </v-row>
     </div>
