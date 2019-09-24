@@ -1,7 +1,6 @@
 <template>
     <v-app id="app">
-        <app-bar />
-        <drawer />
+        <navbar />
         <v-content>
             <v-container>
                 <router-view />
@@ -11,14 +10,12 @@
 </template>
 
 <script>
-import AppBar from "./components/AppBar";
-import Drawer from "./components/Drawer";
+import Navbar from "./components/Navbar";
 
 export default {
     name: "App",
     components: {
-        AppBar,
-        Drawer
+        Navbar
     }
 };
 </script>
